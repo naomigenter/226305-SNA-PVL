@@ -1,0 +1,102 @@
+---
+title: "Codebuch Testat"
+author: "Naomi Genter, ng072"
+date: "7/8/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Github und Datensammlung 
+
+Die Dateien des Testats liegen in dem Github-Verzeichnis 
+https://github.com/naomigenter/226305-SNA-PVL 
+
+## Datenerhebung 
+
+Die Daten wurden über die Website https://www.stuttgarts-schoenster-sport.de/team/spielerinnen erhoben
+
+# Edge-Attribute 
+
+**from**
+entspricht der id in der Nodelist und definiert den jeweiligen Knoten, hier ausschließlich die Spielerinnen 
+
+**to**
+entspricht dem Verein in dem die Spielerin gespielt hat und dem Land/der Nationalität, der sie zugehörig ist 
+
+**relation**
+definiert das Verhältnis zur Organisation: also ob die Spielerin zuvor in dem Verein gespielt hat oder ob sie der Nationalität angehört
+
+1 = hat zuvor in dem Verein gespielt 
+2 = gehört der Nationalität an 
+
+
+# Node-Attribute 
+
+**id**
+eindeutige Identifikation jedes einzelnen Knotens, der erfasst wird. Hier sowohl Spielerinnen, als auch Vereine und Länder/Nationalitäten
+
+**name**
+Name / Bezeichnung der Knoten (der Spielerinnen, Vereine und Länder/Nationalitäten) wie sie später im Netzwerk angezeigt werden
+
+**type**
+definiert die Art des Knotens 
+
+1 = Spielerin 
+2 = Organisation (Verein und Land/Nationalität)
+
+**birth**
+definiert das Jahr, in dem die einzelnen Spielerinnen geboren sind, numerisch in Jahreszahlen codiert 
+
+**age**
+definiert, wie alt die Spielerinnen zum jetzigen Zeitpunkt sind, skaliert in Abschnitte nach 
+
+1 = unter 20 und 20
+2 = 21 bis 23
+3 = 24 bis 26 
+4 = 27 bis 30 
+5 = über 30 
+
+**position**
+definiert die Spielerposition auf dem Feld
+
+1 = Mittelblock
+2 = Zuspiel
+3 = Außenangriff 
+4 = Diagonal 
+5 = Libera 
+
+**country**
+definiert das Land, in dem die jeweilige Spielerin geboren ist bzw. die Nationalität
+
+1 = Deutschland
+2 = Niederlande
+3 = USA
+4 = Bulgarien
+5 = Belgien
+6 = Polen
+7 = Spanien
+8 = Finnland
+
